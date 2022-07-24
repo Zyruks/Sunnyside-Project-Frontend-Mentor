@@ -1,0 +1,33 @@
+@use "../abstract/" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60);
+  align-items: center;
+  justify-content: flex-start;
+
+  background-image: url("../assets/images/mobile/image-header-og.jpg");
+  background-position: center center;
+  background-size: cover;
+  block-size: 100vh;
+
+  @include breakpoint(large) {
+    background-image: url("../assets/images/desktop/image-header-og.jpg");
+  }
+}
+
+.hero__title {
+  inline-size: 100%;
+  margin-block-start: 25%;
+  @include breakpoint(large) {
+    margin-block-start: rem(120);
+  }
+}
+
+.hero__arrow-down {
+  margin-block-start: rem(40);
+  block-size: rem(180);
+
+  animation: key-hero-arrow 1s ease-in-out infinite alternate;
+}

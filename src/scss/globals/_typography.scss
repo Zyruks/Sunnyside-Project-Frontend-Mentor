@@ -36,7 +36,7 @@ h4 {
 }
 
 /* ******************* *\
- ? #nav typography
+ ? #header typography
 \* ******************* */
 .nav__pages {
   color: var(--grayish-blue);
@@ -70,5 +70,23 @@ h4 {
 }
 
 /* ******************* *\
- ? #nav typography end
+ ? #header typography end
+\* ******************* */
+
+/* ******************* *\
+ ? #hero typography end
+\* ******************* */
+
+.hero__title {
+  color: var(--white);
+  font-weight: 900;
+  font-size: clamp(rem(24), 10vw, rem(50));
+  font-family: Fraunces, serif;
+  letter-spacing: rem(15);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ******************* *\
+ ? #hero typography end
 \* ******************* */

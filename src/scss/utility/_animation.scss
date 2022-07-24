@@ -37,3 +37,16 @@
 .close-mobile-menu {
   animation: key-close-mobile-menu 600ms ease-in-out forwards;
 }
+
+/* #hero animation */
+@keyframes key-hero-arrow {
+  0% {
+    transform: translateY(rem(0));
+  }
+
+  100% {
+    transform: translateY(rem(20));
+  }
+}
+
+/* #hero animation end */
