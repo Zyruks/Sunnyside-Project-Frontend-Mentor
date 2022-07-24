@@ -48,6 +48,52 @@
   </head>
 
   <body>
+    <header class="header">
+      <img
+        class="nav__logo"
+        src="./assets/images/logo.svg"
+        alt="Logotype Sunny Day"
+      />
+      <div class="burger-menu-wrapper js-burger-menu-wrapper">
+        <label class="burger-menu">
+          <input
+            type="checkbox"
+            class="burger-menu__checkbox js-burger-menu__checkbox"
+            onclick="navToggle()"
+          />
+          <div class="burger-menu__graphic">
+            <div class="menu">
+              <span></span>
+              <span></span>
+            </div>
+            <svg>
+              <use xlink:href="#path"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#path"></use>
+            </svg>
+          </div>
+        </label>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+          <symbol
+            xmlns="http://www.w3.org/2000/svg"
+            viewbox="0 0 44 44"
+            id="path"
+          >
+            <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+          </symbol>
+        </svg>
+      </div>
+      <nav class="nav js-nav">
+        <span class="nav__triangle"></span>
+        <a href="#" class="nav__pages js-page-about">About</a>
+        <a href="#" class="nav__pages js-page-services">Services</a>
+        <a href="#" class="nav__pages js-page-project">Project</a>
+        <a href="#" class="nav__pages nav__pages--active js-page-contact"
+          >Contact</a
+        >
+      </nav>
+    </header>
     <!-- <footer>
       <div class="attribution">
         Challenge by
