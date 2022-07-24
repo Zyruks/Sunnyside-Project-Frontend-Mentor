@@ -12,10 +12,11 @@ function browsersyncServer(cb) {
   browserSync.init({
     server: {
       baseDir: "public/",
-      directory: true,
-      https: true,
+      // directory: true,
+      // https: true,
     },
     browser: ["google chrome", "firefox"],
+    notify: false,
   });
   cb();
 }
