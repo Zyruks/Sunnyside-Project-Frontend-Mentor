@@ -36,9 +36,39 @@ h4 {
 }
 
 /* ******************* *\
- ? #card typography
+ ? #nav typography
 \* ******************* */
+.nav__pages {
+  color: var(--grayish-blue);
+  font-size: rem(24);
+
+  transition: color 400ms ease-in-out;
+
+  &:hover {
+    color: var(--very-dark-grayish-blue);
+  }
+  @include breakpoint(large) {
+    color: var(--white);
+    font-size: clamp(rem(18), 2vw, rem(24));
+
+    &:hover {
+      color: var(--grayish-blue);
+    }
+  }
+}
+
+.nav__pages--active {
+  color: hsl(0deg, 0%, 0%);
+  font-weight: 900;
+  font-size: rem(18);
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  @include breakpoint(large) {
+    color: hsl(0deg, 0%, 0%);
+    font-size: clamp(rem(10), 2vw, rem(14));
+  }
+}
 
 /* ******************* *\
- ? #card typography end
+ ? #nav typography end
 \* ******************* */

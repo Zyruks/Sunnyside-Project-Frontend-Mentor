@@ -18,6 +18,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+
+  background-color: red;
 }
 
 li {
@@ -25,6 +27,10 @@ li {
 }
 
 a {
-  color: #f00;
+  color: hsl(0deg, 100%, 50%);
   text-decoration: none;
+}
+
+header {
+  margin: rem(16);
 }

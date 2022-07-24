@@ -1,0 +1,87 @@
+@use "../abstract/" as *;
+
+.header {
+  position: absolute;
+  inset-inline: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  inset-block-start: 0;
+}
+
+.nav {
+  position: absolute;
+  inset-inline: rem(5);
+
+  display: none;
+  flex-direction: column;
+  gap: rem(40);
+  align-items: center;
+
+  background-color: var(--white);
+  padding-block: rem(48);
+  inset-block-start: rem(80);
+
+  @include breakpoint(large) {
+    position: relative;
+    padding-block: 0;
+    inset-block-start: 10%;
+
+    display: flex;
+    flex-direction: row;
+    gap: rem(20);
+    justify-content: flex-end;
+    inline-size: 60%;
+
+    background-color: rgba(0, 0, 0, 0%);
+    inset-inline: 0;
+  }
+}
+
+.nav__triangle {
+  position: absolute;
+  inset-block-start: rem(-30);
+
+  inset-inline-end: 0;
+  inline-size: rem(40);
+  block-size: rem(40);
+
+  background-color: var(--white);
+
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+.nav__pages {
+  padding: rem(16) rem(30);
+  border-radius: rem(30);
+
+  background-color: rgba(255, 255, 255, 0%);
+
+  transition: background-color 400ms ease-in-out;
+  @include breakpoint(large) {
+    &:hover {
+      padding: rem(16) rem(30);
+      border-radius: rem(30);
+
+      color: hsl(0deg, 0%, 100%);
+
+      background-color: rgba(255, 255, 255, 25%);
+    }
+  }
+}
+
+.nav__pages--active {
+  padding: rem(16) rem(30);
+  border-radius: rem(30);
+
+  background-color: var(--yellow);
+
+  @include breakpoint(large) {
+    background-color: var(--white);
+  }
+}
