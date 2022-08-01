@@ -90,3 +90,64 @@ h4 {
 /* ******************* *\
  ? #hero typography end
 \* ******************* */
+
+/* ******************* *\
+ ? #main-content typography end
+\* ******************* */
+.headings-h2 {
+  font-weight: 900;
+  font-size: rem(32);
+  font-family: $secondary-font;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: clamp(rem(28), 1.8vw, rem(36));
+    inline-size: 85%;
+
+    text-align: start;
+  }
+}
+
+.descriptions {
+  color: var(--dark-grayish-blue);
+  font-size: rem(16);
+  line-height: 1.6;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: clamp(rem(14), 1.8vw, rem(24));
+    line-height: 1.4;
+    text-align: start;
+  }
+}
+
+.main-content__links {
+  color: hsl(0deg, 0%, 0%);
+  font-size: rem(16);
+  font-family: $secondary-font;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include breakpoint(large) {
+    font-size: clamp(rem(16), 1.8vw, rem(20));
+  }
+}
+
+.main-content__divisions-combo {
+  & .headings-h2,
+  & .descriptions {
+    color: var(--graphic-text);
+  }
+
+  @include breakpoint(large) {
+    & .headings-h2 {
+      text-align: center;
+    }
+
+    & .descriptions {
+      text-align: center;
+    }
+  }
+}
+
+/* ******************* *\
+ ? #main-content typography end
+\* ******************* */

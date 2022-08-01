@@ -18,8 +18,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-
-  background-color: red;
 }
 
 li {
@@ -33,4 +31,10 @@ a {
 
 header {
   margin: rem(16);
+}
+
+picture {
+  display: block;
+
+  line-height: 0;
 }
