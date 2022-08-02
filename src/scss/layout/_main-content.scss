@@ -86,6 +86,10 @@
   border-block-end: rem(10) var(--yellow) solid;
 
   transition: opacity 300ms ease-in-out;
+
+  @include breakpoint(large) {
+    transform: translateX(rem(-4)) translateY(rem(-8));
+  }
 }
 
 .main-content__links:hover ~ .border-bottom {
@@ -109,7 +113,7 @@
 
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100% 100%;
+  background-size: 100%;
   inline-size: 100%;
   block-size: rem(600);
 

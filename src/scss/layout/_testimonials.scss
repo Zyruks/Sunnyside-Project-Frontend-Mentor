@@ -30,7 +30,7 @@
 
   margin-block-start: rem(50);
   @include breakpoint(large) {
-    max-inline-size: rem(270);
+    max-inline-size: rem(320);
   }
 }
 
@@ -46,6 +46,10 @@
   inline-size: rem(70);
 
   border-radius: 50%;
+
+  @include breakpoint(large) {
+    inline-size: rem(120);
+  }
 }
 
 .testimonials .descriptions {

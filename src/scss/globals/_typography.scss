@@ -160,11 +160,14 @@ h4 {
   font-size: rem(16);
   letter-spacing: rem(5);
   text-transform: uppercase;
+  @include breakpoint(large) {
+    font-size: rem(20);
+  }
 }
 
 .testimonials .descriptions {
   @include breakpoint(large) {
-    font-size: rem(14);
+    font-size: clamp(rem(14), 1.5vw, rem(16));
     text-align: center;
   }
 }
