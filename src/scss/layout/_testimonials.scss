@@ -47,6 +47,11 @@
 
   border-radius: 50%;
 
+  transition: transform 500ms ease-in-out;
+
+  &:hover {
+    transform: rotate(20deg);
+  }
   @include breakpoint(large) {
     inline-size: rem(120);
   }

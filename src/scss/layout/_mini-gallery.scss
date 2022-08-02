@@ -11,6 +11,27 @@
   }
 }
 
+.mini-gallery__item {
+  inline-size: 100%;
+
+  overflow: hidden;
+
+  @include breakpoint(large) {
+    overflow: visible;
+  }
+}
+
 .mini-gallery__item img {
   inline-size: 100%;
+
+  transition: transform 300ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+  @include breakpoint(large) {
+    &:hover {
+      transform: translateY(rem(-20));
+    }
+  }
 }
