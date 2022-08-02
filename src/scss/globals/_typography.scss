@@ -151,3 +151,34 @@ h4 {
 /* ******************* *\
  ? #main-content typography end
 \* ******************* */
+
+/* ******************* *\
+ ? #testimonials typography end
+\* ******************* */
+.testimonials-section .headings-h2 {
+  color: var(--grayish-blue);
+  font-size: rem(16);
+  letter-spacing: rem(5);
+  text-transform: uppercase;
+}
+
+.testimonials .descriptions {
+  @include breakpoint(large) {
+    font-size: rem(14);
+    text-align: center;
+  }
+}
+
+.headings-h3 {
+  font-size: rem(20);
+  font-family: $secondary-font;
+}
+
+.testimonials__title {
+  color: var(--grayish-blue);
+  font-size: rem(14);
+}
+
+/* ******************* *\
+ ? #testimonials typography end
+\* ******************* */
