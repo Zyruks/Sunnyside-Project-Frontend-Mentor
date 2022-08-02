@@ -7,7 +7,7 @@
     opacity: 0%;
   }
 
-  85% {
+  75% {
     transform: translateY(rem(20));
   }
 
@@ -20,7 +20,7 @@
 .open-mobile-menu {
   display: flex;
 
-  animation: key-open-mobile-menu 600ms ease-in-out forwards;
+  animation: key-open-mobile-menu 800ms ease-in-out forwards;
 }
 @keyframes key-close-mobile-menu {
   0% {
