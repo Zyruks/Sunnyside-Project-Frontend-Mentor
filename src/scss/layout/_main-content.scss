@@ -135,6 +135,10 @@
 .main-content__divisions-combo--graphic-design {
   background-image: url("../assets/images/mobile/image-graphic-design-og.jpg");
 
+  & .descriptions {
+    inline-size: 90%;
+    margin-block-end: rem(50);
+  }
   @include breakpoint(large) {
     background-image: url("../assets/images/desktop/image-graphic-design-og.jpg");
 
@@ -148,6 +152,10 @@
 .main-content__divisions-combo--photography {
   background-image: url("../assets/images/mobile/image-photography-og.jpg");
 
+  & .descriptions {
+    inline-size: 90%;
+    margin-block-end: rem(50);
+  }
   @include breakpoint(large) {
     background-image: url("../assets/images/desktop/image-photography-og.jpg");
 
