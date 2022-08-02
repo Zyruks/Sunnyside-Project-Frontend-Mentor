@@ -15,7 +15,9 @@
 
 .nav {
   position: absolute;
-  inset-inline: rem(5);
+  inset-inline: rem(25);
+
+  z-index: 2;
 
   display: none;
   flex-direction: column;

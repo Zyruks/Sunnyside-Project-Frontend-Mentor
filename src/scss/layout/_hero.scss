@@ -29,5 +29,7 @@
   margin-block-start: rem(40);
   block-size: rem(180);
 
+  z-index: 1;
+
   animation: key-hero-arrow 1s ease-in-out infinite alternate;
 }
