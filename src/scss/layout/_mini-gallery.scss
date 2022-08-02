@@ -1,0 +1,16 @@
+@use "../abstract/" as *;
+
+.mini-gallery {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  @include breakpoint(large) {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.mini-gallery__item img {
+  inline-size: 100%;
+}
