@@ -55,37 +55,19 @@
         src="./assets/images/logo.svg"
         alt="Logotype Sunny Day"
       />
-      <div class="burger-menu-wrapper js-burger-menu-wrapper">
-        <label class="burger-menu">
-          <input
-            type="checkbox"
-            class="burger-menu__checkbox js-burger-menu__checkbox"
-            onclick="navToggle()"
-            aria-checked="false"
-          />
-          <div class="burger-menu__graphic">
-            <div class="menu">
-              <span></span>
-              <span></span>
-            </div>
-            <svg>
-              <use xlink:href="#path"></use>
-            </svg>
-            <svg>
-              <use xlink:href="#path"></use>
-            </svg>
-          </div>
-        </label>
-        <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-          <symbol
-            xmlns="http://www.w3.org/2000/svg"
-            viewbox="0 0 44 44"
-            id="path"
-          >
-            <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
-          </symbol>
-        </svg>
+
+      <div class="menu-toggle">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="cross">
+          <span></span>
+          <span></span>
+        </div>
       </div>
+
       <nav class="nav js-nav">
         <span class="nav__triangle"></span>
         <a href="#" class="nav__pages js-page-about">About</a>
