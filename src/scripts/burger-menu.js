@@ -1,18 +1,26 @@
 /* Burger Menu JS*/
 
-const burgerMenu = document.querySelector(".js-burger-menu-wrapper");
 const nav = document.querySelector(".js-nav");
-const burgerCheckBox = document.querySelector(".js-burger-menu__checkbox");
+const menuToggle = document.querySelector(".menu-toggle");
+
+/* It's adding an event listener to the menuToggle button. When the button is clicked, it will run the
+navToggle function. */
+menuToggle.addEventListener("click", () => {
+  navToggle();
+});
 
 /**
- * If the checkbox is checked, remove the close-mobile-menu class and add the open-mobile-menu class.
- * If the checkbox is unchecked, add the close-mobile-menu class and remove the open-mobile-menu class
+ * If the menuToggle button doesn't have the class "open", add it and remove the "close-mobile-menu"
+ * class and add the "open-mobile-menu" class. If it does have the class "open", remove it and add the
+ * "close-mobile-menu" class
  */
 function navToggle() {
-  if (burgerCheckBox.checked) {
+  if (menuToggle.classList.contains("open") == false) {
+    menuToggle.classList.toggle("open");
     nav.classList.remove("close-mobile-menu");
     nav.classList.add("open-mobile-menu");
   } else {
+    menuToggle.classList.toggle("open");
     nav.classList.add("close-mobile-menu");
 
     setTimeout(() => {

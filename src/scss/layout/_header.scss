@@ -6,16 +6,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: rem(28) auto 0;
+  margin: 0 auto;
   max-inline-size: rem(1440);
   inset-inline: 0;
   inset-block-start: 0;
   padding-inline: rem(16);
+
+  @include breakpoint(large) {
+    inset-block-start: rem(30);
+  }
 }
 
 .nav {
   position: absolute;
-  inset-inline: rem(25);
+  inset-inline: rem(60);
 
   z-index: 2;
 
@@ -26,7 +30,7 @@
 
   background-color: var(--white);
   padding-block: rem(48);
-  inset-block-start: rem(80);
+  inset-block-start: rem(120);
 
   @include breakpoint(large) {
     position: relative;
