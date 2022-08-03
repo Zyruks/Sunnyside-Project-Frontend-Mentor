@@ -25,6 +25,16 @@ li {
 }
 
 a {
-  color: #f00;
+  color: var(--graphic-text);
   text-decoration: none;
+}
+
+header {
+  margin: rem(16);
+}
+
+picture {
+  display: block;
+
+  line-height: 0;
 }

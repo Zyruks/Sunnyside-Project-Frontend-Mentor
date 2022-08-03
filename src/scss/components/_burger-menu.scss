@@ -1,0 +1,164 @@
+@use "../abstract/" as *;
+
+.burger-menu-wrapper {
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+.burger-menu {
+  display: block;
+
+  cursor: pointer;
+}
+
+.burger-menu__checkbox {
+  display: none;
+}
+
+.burger-menu__checkbox + .burger-menu__graphic {
+  position: relative;
+
+  inline-size: rem(25);
+  block-size: rem(20);
+
+  svg {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+
+    display: block;
+    inline-size: rem(44);
+    block-size: rem(44);
+    margin: rem(-22) 0 0 rem(-22);
+
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    backface-visibility: hidden;
+
+    transition: stroke-dashoffset 0.5s ease, stroke-dasharray 0.6s ease,
+      transform 0.5s ease, stroke 0.4s ease;
+
+    fill: none;
+    stroke: var(--white);
+    stroke-width: rem(2);
+    stroke-linecap: round;
+    stroke-dasharray: 0 82.801 10 82.801; //  third number change width of the dash
+    stroke-dashoffset: 82.801;
+
+    &:nth-child(3) {
+      transform: rotate(180deg) scale(1);
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  inset: 0;
+
+  transition: transform 0.5s ease;
+
+  span {
+    position: absolute;
+    inset-inline: 0;
+
+    display: block;
+
+    &::before,
+    &::after {
+      position: absolute;
+
+      display: block;
+      inline-size: 50%;
+      block-size: rem(2);
+      border-radius: rem(1);
+
+      background: var(--white);
+      backface-visibility: hidden;
+
+      transition: transform 0.5s ease, border-radius 0.3s ease,
+        background 0.4s ease;
+
+      content: "";
+    }
+
+    &:first-child {
+      inset-block-start: 0;
+
+      &::before,
+      &::after {
+        inset-block-start: 0;
+      }
+    }
+
+    &:last-child {
+      inset-block-end: 0;
+
+      &::before,
+      &::after {
+        inset-block-end: 0;
+      }
+    }
+
+    &::before {
+      inset-inline-start: 0;
+
+      transform: translate(rem(1), 0) scaleX(1.1);
+      transform-origin: 0 50%;
+    }
+
+    &::after {
+      inset-inline-end: 0;
+
+      transform: translate(rem(-1), 0) scaleX(1.1);
+      transform-origin: 100% 50%;
+    }
+  }
+}
+
+// When i click the burger menu
+.burger-menu__checkbox:checked + .burger-menu__graphic {
+  svg {
+    stroke-dashoffset: 62;
+    stroke-dasharray: 0 82.801 62 82.801;
+
+    transform: rotate(90deg);
+
+    stroke: var(--white);
+
+    &:nth-child(3) {
+      transform: rotate(270deg);
+    }
+  }
+}
+
+.burger-menu__checkbox:checked + .burger-menu__graphic .menu {
+  transform: rotate(90deg);
+
+  span {
+    &::before,
+    &::after {
+      background: var(--white);
+    }
+
+    &:first-child {
+      &::before {
+        transform: rotate(45deg) translate(rem(2.2), rem(-3)) scaleX(1.05);
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(rem(-2.2), rem(-3)) scaleX(1.05);
+      }
+    }
+
+    &:last-child {
+      &::before {
+        transform: rotate(-45deg) translate(rem(2.2), rem(3)) scaleX(1.05);
+      }
+
+      &::after {
+        transform: rotate(45deg) translate(rem(-2.2), rem(3)) scaleX(1.05);
+      }
+    }
+  }
+}
