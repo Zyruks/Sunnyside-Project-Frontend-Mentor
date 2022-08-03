@@ -131,6 +131,10 @@ h4 {
 }
 
 .main-content__divisions-combo {
+  & .headings-h2 {
+    font-size: clamp(rem(24), 3vw, rem(28));
+  }
+
   & .headings-h2,
   & .descriptions {
     color: var(--graphic-text);
