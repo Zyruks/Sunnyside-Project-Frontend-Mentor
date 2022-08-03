@@ -36,7 +36,11 @@
     align-items: start;
     justify-content: start;
     padding-block: rem(20);
-    padding-inline: rem(60);
+    padding-inline: rem(80);
+  }
+
+  @include breakpoint(x-large) {
+    padding-inline: rem(180);
   }
 }
 
@@ -107,7 +111,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: rem(20);
+  gap: rem(40);
   align-items: center;
   justify-content: flex-end;
 
@@ -147,8 +151,15 @@
     background-image: url("../assets/images/desktop/image-graphic-design-og.jpg");
 
     & .descriptions {
-      inline-size: 70%;
+      inline-size: 75%;
       margin-block-end: rem(30);
+    }
+  }
+
+  @include breakpoint(x-large) {
+    & .descriptions {
+      inline-size: 45%;
+      margin-block-end: rem(80);
     }
   }
 }
@@ -164,8 +175,14 @@
     background-image: url("../assets/images/desktop/image-photography-og.jpg");
 
     & .descriptions {
-      inline-size: 65%;
-      margin-block-end: rem(50);
+      inline-size: 75%;
+      margin-block-end: rem(30);
+    }
+  }
+  @include breakpoint(x-large) {
+    & .descriptions {
+      inline-size: 45%;
+      margin-block-end: rem(80);
     }
   }
 }

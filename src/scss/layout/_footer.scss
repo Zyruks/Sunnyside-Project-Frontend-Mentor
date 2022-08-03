@@ -5,7 +5,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(30);
   align-items: center;
   justify-content: flex-start;
 
@@ -17,10 +17,10 @@
 .footer-logo {
   inline-size: rem(190);
 
-  margin-block-start: rem(50);
+  margin-block-start: rem(100);
 
   filter: invert(49%) sepia(44%) saturate(411%) hue-rotate(118deg)
-    brightness(90%) contrast(87%);
+    brightness(70%) contrast(120%);
 }
 
 .footer-nav {
@@ -65,4 +65,8 @@
   inline-size: 100%;
 
   inset-block-end: rem(5);
+
+  a {
+    transition: color 300ms ease-in-out;
+  }
 }
