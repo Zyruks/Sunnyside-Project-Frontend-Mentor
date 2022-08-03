@@ -1,6 +1,8 @@
 @use "../abstract/" as *;
 
 .footer {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: rem(40);
@@ -9,7 +11,7 @@
 
   background-color: var(--footer-bg);
 
-  block-size: rem(350);
+  block-size: rem(400);
 }
 
 .footer-logo {
@@ -54,4 +56,13 @@
         brightness(200%) contrast(100%);
     }
   }
+}
+
+.attribution {
+  position: absolute;
+
+  align-self: flex-end;
+  inline-size: 100%;
+
+  inset-block-end: rem(5);
 }

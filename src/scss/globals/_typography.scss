@@ -201,6 +201,17 @@ h4 {
   }
 }
 
+.attribution {
+  color: var(--footer);
+  text-align: center;
+
+  a {
+    &:hover {
+      color: hsl(0deg, 0%, 100%);
+    }
+  }
+}
+
 /* ******************* *\
  ? #footer typography end
 \* ******************* */

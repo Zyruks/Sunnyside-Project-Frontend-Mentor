@@ -5,3 +5,12 @@
 @forward "layout";
 @forward "components";
 @forward "utility";
+
+/* 
+  READ-ME
+
+  create function rem() inside abstract _functions.scss is a simple function that convert pixels to rem.
+
+  inside abstract _breakpoints they are mixins for max-width and min-width width small, medium, large sizes devices.
+
+*/
