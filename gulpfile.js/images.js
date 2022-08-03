@@ -19,22 +19,10 @@ function imageCompiler() {
       responsive({
         formats: [
           {
-            width: (metadata) => Math.trunc(metadata.width * 0.75),
-            rename: { suffix: "-lg" },
-            format: "jpeg",
-            jpegOptions: { quality: 90, progressive: true },
-          },
-          {
             width: (metadata) => Math.trunc(metadata.width * 1),
             rename: { suffix: "-og" },
             format: "jpeg",
             jpegOptions: { quality: 90, progressive: true },
-          },
-          {
-            width: (metadata) => Math.trunc(metadata.width * 0.75),
-            format: "webp",
-            rename: { suffix: "-lg" },
-            webpOptions: { quality: 90, progressive: true },
           },
 
           {
