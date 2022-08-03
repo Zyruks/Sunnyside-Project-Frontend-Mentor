@@ -6,8 +6,7 @@
   align-items: center;
   justify-content: center;
 
-  padding-block-start: rem(50);
-  padding-block-end: rem(100);
+  padding-block: rem(150);
   padding-inline: rem(16);
 
   @include breakpoint(large) {
@@ -31,6 +30,10 @@
   margin-block-start: rem(50);
   @include breakpoint(large) {
     max-inline-size: rem(320);
+  }
+
+  @include breakpoint(x-large) {
+    max-inline-size: rem(380);
   }
 }
 

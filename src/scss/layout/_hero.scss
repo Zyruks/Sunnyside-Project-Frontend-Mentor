@@ -20,15 +20,15 @@
 
 .hero__title {
   inline-size: 100%;
-  margin-block-start: 25%;
+  margin-block-start: 35%;
   @include breakpoint(large) {
-    margin-block-start: rem(120);
+    margin-block-start: rem(220);
   }
 }
 
 .hero__arrow-down {
   margin-block-start: rem(40);
-  block-size: rem(180);
+  block-size: rem(140);
 
   z-index: 1;
 

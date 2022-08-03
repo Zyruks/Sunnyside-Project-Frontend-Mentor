@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: rem(16) auto 0;
+  margin: rem(28) auto 0;
   max-inline-size: rem(1440);
   inset-inline: 0;
   inset-block-start: 0;
@@ -31,17 +31,20 @@
   @include breakpoint(large) {
     position: relative;
     padding-block: 0;
-    inset-block-start: 10%;
+    inset-block-start: 0;
 
     display: flex;
     flex-direction: row;
-    gap: rem(20);
+    gap: rem(10);
     justify-content: flex-end;
-    inline-size: 60%;
 
     background-color: rgba(0, 0, 0, 0%);
     inset-inline: 0;
   }
+}
+
+.nav__logo {
+  inline-size: rem(200);
 }
 
 .nav__triangle {
@@ -62,15 +65,15 @@
 }
 
 .nav__pages {
-  padding: rem(16) rem(30);
+  padding: rem(12) rem(30);
   border-radius: rem(30);
 
   background-color: rgba(255, 255, 255, 0%);
 
-  transition: background-color 400ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
   @include breakpoint(large) {
     &:hover {
-      padding: rem(16) rem(30);
+      padding: rem(12) rem(30);
       border-radius: rem(30);
 
       color: hsl(0deg, 0%, 100%);
@@ -81,7 +84,7 @@
 }
 
 .nav__pages--active {
-  padding: rem(16) rem(30);
+  padding: rem(12) rem(30);
   border-radius: rem(30);
 
   background-color: var(--yellow);
